@@ -120,13 +120,15 @@ function displayQuestion() {
         mainQuestionContainer.innerHTML = `<h6>${question.question}</h6>`;
         questionOptions.innerHTML = ''; // Clearing previous options
 
-        const unOrderedList = document.createElement('ul'); // Create one ul
+        const unOrderedList = document.createElement('ul');
 
         Object.entries(question.choices).forEach(([key, choice]) => {
+
             const listItem = document.createElement('li');
+
             listItem.textContent = choice;
-            listItem.classList.add('li-bg'); // Apply initial class
-            unOrderedList.appendChild(listItem); // Append all listItems to the same ul
+            listItem.classList.add('li-bg');
+            unOrderedList.appendChild(listItem);
 
             // Add event listener for each li click
             listItem.addEventListener('click', () => {
@@ -140,7 +142,7 @@ function displayQuestion() {
                 // Check if the answer is correct or wrong
                 if (key === question.correctAnswer) {
                     listItem.classList.remove('li-bg');
-                    listItem.classList.add('correct'); // Apply correct class for right answer
+                    listItem.classList.add('success'); // Apply success class for right answer
                 } else {
                     listItem.classList.remove('li-bg');
                     listItem.classList.add('danger'); // Apply danger class for wrong answer
@@ -226,7 +228,7 @@ function endQuiz() {
             logo.style.display = 'none';
             questionContainer.style.display = 'none';
             categorySection.style.display = 'flex';
-            backBtn.classList.add('showBtn');
+            // backBtn.classList.add('showBtn');
             questionCounting.classList.remove('showBtn');
 
         } else {
@@ -266,7 +268,7 @@ function sectionOne() {
     logo.style.display = 'none';
     questionContainer.style.display = 'none';
     categorySection.style.display = 'flex';
-    backBtn.classList.add('showBtn');
+    // backBtn.classList.add('showBtn');
 
 }
 
