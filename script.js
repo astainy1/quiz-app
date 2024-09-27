@@ -210,7 +210,7 @@ function endQuiz() {
     infoText.style.display = 'block';
     playBtn.innerText = 'Play Again?'
     playBtn.style.display = 'block';
-    questionCounting.classList.remove('showBtn');
+    // questionCounting.classList.remove('showBtn');
 
 
     playBtn.addEventListener('click', () => {
@@ -229,7 +229,7 @@ function endQuiz() {
             questionContainer.style.display = 'none';
             categorySection.style.display = 'flex';
             // backBtn.classList.add('showBtn');
-            questionCounting.classList.remove('showBtn');
+            // questionCounting.classList.remove('showBtn');
 
         } else {
             return false;
@@ -251,10 +251,11 @@ categories.forEach((categoryOption, index) => {
         questionContainer.style.display = 'flex';
         categorySection.style.display = 'none';
         backBtn.classList.remove('showBtn');
-        questionCounting.classList.add('showBtn');
+        // questionCounting.classList.add('showBtn');
 
         let categoryType = ['all', 'css', 'html', 'js'][index];
-        const questions = await getRandomQuestions(categoryType, 10); // Change number of questions as needed
+         // Change number of questions as needed
+        const questions = await getRandomQuestions(categoryType, 10);
         startQuiz(questions);
     });
 });
@@ -310,9 +311,3 @@ function startTimer() {
 }
 
 
-// Reset button functionality
-// resetBtn.addEventListener('click', () => {
-//     resetBtn.style.display = 'flex'; // Hide the reset button
-//     infoText.style.display = 'none'; // Hide score info
-//     categorySection.style.display = 'flex'; // Show category selection
-// })
