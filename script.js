@@ -48,7 +48,7 @@ let gameTitle = document.querySelector('#heading'),
     mainQuestionContainer = document.querySelector('#main-question-tag'),
     questionOptions = document.querySelector('.options'),
     backBtn = document.querySelector('.back'),
-    questionCounting = document.querySelector('.counting'),
+    // questionCounting = document.querySelector('.counting'),
     timerDisplay = document.querySelector('.count-down');
 // resetBtn = document.querySelector('.next'); // Reference to the reset button; // Add a timer display
 
